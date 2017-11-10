@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Automated Panorama Stitching</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Automated Panorama Stitching</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="lead"> 
+          Add several images: </p>
+          <label class="custom-file">
+            <input type="file" id="inputFiles" multiple onchange="javascript:inputImage(this.files);">
+            <span class="custom-file-control"></span>
+          </label>
+          <p>
+            <br/>
+            <button id="reset" type="button" class="btn btn-danger" onclick="doReset();">Try another test!</button>
+          </p>
+
+        </div>
+        <div class="col-lg-6">
+          <p class="lead">Logs:</p>
+          <div class="form-group">
+            <div id="logs" class="bg-faded" style="overflow-y: auto; height:180px; padding: 10px;"></div>
+
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="lead">Extraction: </p>
+      <div id="extraction" style="overflow-x: hidden; overflow-y: auto; height:440px;">
+      </div>
+      <hr />
+      <p class="lead">Result:</p>
+      <div id="result">
+      </div>
+
+      <footer class="footer row">
+        <div class="col-lg-6 text-right">
+          Thien, Truong Vi
+          <br />14520874 (KHTN2014)
+        </div>
+        <div class="col-lg-6">
+          Nguyen, Nguyen Thanh
+          <br />14520602 (KHTN2014)
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="solution/page.js"></script>   
+    <script src="solution/panorama.js"></script> 
+    <script src="solution/filter.js"></script> 
+    <script src="solution/pyramid.js"></script> 
+    <script src="solution/keypoints.js"></script> 
+    <script src="solution/description.js"></script> 
+    <script src="solution/match.js"></script>   
+    <script src="solution/homography.js"></script> 
+    <script src="solution/stich.js"></script>   
+  </body>
+</html>
